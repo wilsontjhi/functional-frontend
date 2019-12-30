@@ -10,12 +10,17 @@ const KeySummary = HigherOrderComponent('estimate', KeySummaryView)
 const Chart = HigherOrderComponent('historical', ChartView)
 const Report = HigherOrderComponent('report', ReportView)
 
+// Commented Out for demo purpose
+// const App = () => (<KeySummaryView content={{keySummary:"HelloThere"}}/>)
+// const App = () => (<ChartView/>)
+
 const App = () => (
     <Router>
         <Route exact path="/estimate" component={KeySummary} />
         <Route exact path="/historical" component={Chart} />
         <Route exact path="/report" component={Report} />
-    </Router>)
+    </Router>
+)
 
 
 export default App;

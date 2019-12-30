@@ -4,13 +4,12 @@ import {Area, AreaChart, CartesianGrid, Tooltip, XAxis, YAxis} from 'recharts'
 const placeholderData = {
     salesData:
         [
-            {"name": "Month 1", "historical": 4000},
-            {"name": "Month 2", "historical": 3000},
-            {"name": "Month 3", "historical": 2000},
-            {"name": "Month 4", "historical": 2780},
-            {"name": "Month 5", "historical": 1890},
-            {"name": "Month 6", "historical": 2390, "estimate": 2390},
-            {"name": "Month 7", "estimate": 3490}
+            {"name": "Month 1", "historical": 0},
+            {"name": "Month 2", "historical": 0},
+            {"name": "Month 3", "historical": 0},
+            {"name": "Month 4", "historical": 0},
+            {"name": "Month 5", "historical": 0},
+            {"name": "Month 6", "historical": 0}
         ]
 }
 
