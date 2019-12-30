@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HigherOrderComponent = (WrappedComponent) => {
+const HigherOrderComponent = (location, WrappedComponent) => {
     return class HOC extends React.Component {
 
         state = {
@@ -8,7 +8,7 @@ const HigherOrderComponent = (WrappedComponent) => {
         };
 
         componentDidMount() {
-            fetch("https://localhost:5001/api/values/")
+            fetch(`https://localhost:5001/api/${location}`)
                 .then(res => res.json())
                 .then(res => this.setState({ content: res }))
         }
@@ -16,7 +16,7 @@ const HigherOrderComponent = (WrappedComponent) => {
         render() {
             return (
                 <div>
-                    <WrappedComponent content={JSON.stringify(this.state.content)} {...this.props}/>
+                    <WrappedComponent content={this.state.content} {...this.props}/>
                 </div>
             )
         }
