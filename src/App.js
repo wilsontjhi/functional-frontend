@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
-import HigherOrderComponent from "./hoc";
+import withDataLoading from "./hoc";
 import KeySummaryView from "./keysummary";
 import ChartView from "./chart";
 import ReportView from "./report";
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-const KeySummary = HigherOrderComponent('estimate', KeySummaryView)
-const Chart = HigherOrderComponent('historical', ChartView)
-const Report = HigherOrderComponent('report', ReportView)
+const KeySummary = withDataLoading('estimate', KeySummaryView)
+const Chart = withDataLoading('historical', ChartView)
+const Report = withDataLoading('report', ReportView)
 
 // Commented Out for demo purpose
 // const App = () => (<KeySummaryView content={{keySummary:"HelloThere"}}/>)

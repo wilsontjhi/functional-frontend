@@ -1,7 +1,7 @@
 import React from 'react'
 import Axios from "axios";
 
-const HigherOrderComponent = (location, WrappedComponent) => {
+const withDataLoading = (location, WrappedComponent) => {
     return class HOC extends React.Component {
 
         state = {
@@ -30,4 +30,4 @@ const HigherOrderComponent = (location, WrappedComponent) => {
     };
 }
 
-export default HigherOrderComponent
+export default withDataLoading
