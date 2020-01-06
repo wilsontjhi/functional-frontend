@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 const KeySummary = withDataLoading('estimate', KeySummaryView)
 const Chart = withDataLoading('historical', ChartView)
-const Report = withDataLoading('report', ReportView)
+const Report = withDataLoading('report/product5', ReportView)
 
 // Commented Out for demo purpose
 // const App = () => (<KeySummaryView content={{keySummary:"HelloThere"}}/>)
